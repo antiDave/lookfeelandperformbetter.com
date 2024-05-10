@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send Google Ads Webhook Request</title>
+</head>
+<body>
+
+<h2>Send Google Ads Webhook Request</h2>
+
+<form id="webhookForm" action="gadhook.php" method="POST">
+  <textarea name="payload" style="width: 100%; height: 200px;">{
+  "lead_id": "TeSter-123-ABCDEFGHIJKLMNOPQRSTUVWXYZ-abcdefghijklmnopqrstuvwxyz-0123456789-AaBbCcDdEeFfGgHhIiJjKkLl",
+  "user_column_data": [
+    {
+      "column_name": "Full Name",
+      "string_value": "FirstName LastName",
+      "column_id": "FULL_NAME"
+    },
+    {
+      "column_name": "User Phone",
+      "string_value": "+16505550123",
+      "column_id": "PHONE_NUMBER"
+    },
+    {
+      "column_name": "User Email",
+      "string_value": "test@example.com",
+      "column_id": "EMAIL"
+    }
+  ],
+  "api_version": "1.0",
+  "form_id": 40000000000,
+  "campaign_id": 21218303984,
+  "google_key": "4Y4oGCReAnQLUIe7isg3NvlnDWOzMmd6awC8eTPNACkpKweJDM",
+  "is_test": true,
+  "gcl_id": "TeSter-123-ABCDEFGHIJKLMNOPQRSTUVWXYZ-abcdefghijklmnopqrstuvwxyz-0123456789-AaBbCcDdEeFfGgHhIiJjKkLl",
+  "adgroup_id": 20000000000,
+  "creative_id": 30000000000
+}</textarea><br>
+  <input type="hidden" name="secret_key" value="4Y4oGCReAnQLUIe7isg3NvlnDWOzMmd6awC8eTPNACkpKweJDM">
+  <input type="submit" value="Send Request">
+</form>
+
+</body>
+</html>
