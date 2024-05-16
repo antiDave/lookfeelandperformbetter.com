@@ -2414,7 +2414,7 @@ select {
 
 @media (min-width: 992px) {
   .content-area-l-17-1 {
-    padding-top: 130px;
+    /* padding-top: 130px; */
     padding-bottom: 240px;
   }
 }
