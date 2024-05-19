@@ -4159,6 +4159,9 @@ img.spin {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+  .column-centered li p img{
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .three-one {
