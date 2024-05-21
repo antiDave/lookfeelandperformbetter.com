@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Connect to the database
-    $conn = new mysqli('82.165.214.221', 'usamtg', 'umCWaZq-hm7mxn:', 'leads');
+    $conn = new mysqli('127.0.0.1', 'usamtg', 'umCWaZq-hm7mxn:', 'leads');
     
     // Check connection
     if ($conn->connect_error) {
