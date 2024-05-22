@@ -4384,6 +4384,22 @@ img.spin {
     margin-left: 0px;
   }
 }
-@media (max-width: 767px) {
 
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(92, 107, 176); /* Set the track/bar color */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #8390d1; /* Set the handle color */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aab1d4; /* Set the handle color */
+}
+.element {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: rgb(92, 107, 176) #6174cf; /* Set track and handle colors */
 }

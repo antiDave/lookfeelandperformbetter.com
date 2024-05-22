@@ -41,7 +41,7 @@ if (!empty($name) && !empty($address) && !empty($city) && !empty($state) && !emp
         // Send the email
         $mail->send();
         // Redirect to thankyou.html on success
-        header('Location: thankyou.html');
+        header('Location: https://b636d1b8-475e-4293-8ab0-9310ab569272.paylinks.godaddy.com/9f400975-c8f6-4c02-96c4-1bf');
         exit();
     } catch (Exception $e) {
         // Display an alert and redirect to medical-training.html on error
