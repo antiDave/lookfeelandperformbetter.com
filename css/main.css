@@ -4403,3 +4403,106 @@ img.spin {
   scrollbar-width: thin; /* Set the width of the scrollbar */
   scrollbar-color: rgb(92, 107, 176) #6174cf; /* Set track and handle colors */
 }
+
+
+/* vampire page style  */
+
+.title_vampire{
+  text-align: center;
+  padding: 20px 0px 40px;
+}
+.title_vampire h1.leading-rem44px{
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e3e3e3;
+  display: inline-block;
+  position: relative;
+}
+.title_vampire h1.leading-rem44px::before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 4px solid #007bff;
+  border-radius: 50px;
+  bottom: -7px;
+  left: calc(50% - 2.5px);
+}
+.navhead nav{
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+}
+.navhead nav a{
+  padding: 8px 12px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  color: #151515;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.navhead nav a.active{
+  background: #007bff;
+  color: #fff;
+}
+.navhead nav a::before{
+  content: "";
+  position: absolute;
+  background: #50e3c2;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  top: 0;
+  left: 0;
+  transform: scaleX(0.2);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.navhead nav a:hover::before{
+  transform: scale(1.2);
+  opacity: 1;
+  box-shadow:0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.simpleitem{
+  padding: 20px 20px;
+  background: #fff;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.simpleitem h3, .simpleitem h4{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e3e3e3;
+}
+.simpleitem h3::before, .simpleitem h4::before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 4px solid #007bff;
+  border-radius: 50px;
+  bottom: -7px;
+  left: calc(50% - 2.5px);
+}
+.simpleitem .custom-bullet{
+  padding-left: 0;
+}
+.simpleitem .custom-bullet li{
+  padding: 5px 10px;
+  margin: 0px 5px;
+  border-radius: 5px;
+  color: #007bff;
+  background: #f6f6f6;
+  display: inline-block;
+}

@@ -103,6 +103,33 @@ $(document).ready(function() {
 
 
 
+    
 
 
 });
+
+    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+          vampire page navmenu active class
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.sectionmenu');
+
+        function activateLink() {
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', activateLink);
+        });
+
+        // Check the URL hash on page load
+        const currentHash = window.location.hash;
+        if (currentHash) {
+            const currentLink = document.querySelector(`a[href="${currentHash}"]`);
+            if (currentLink) {
+                currentLink.classList.add('active');
+            }
+        }
+    });
