@@ -4570,7 +4570,6 @@ img.spin {
   width: 100%;
   height: auto;
   display: block;
-  max-width: 350px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -4581,13 +4580,9 @@ img.spin {
   width: 145px;
   height: 4px;
   background: #2d88e9;
-  left: 100%;
+  right: -10px;
   top: 202px;
   z-index: -1;
-}
-.overview_box .overview_img.imgright::before{
-  left: unset;
-  right: 100%;
 }
 .overview_box .overview_img p{
   text-align: center;
@@ -4611,9 +4606,15 @@ img.spin {
   overflow: hidden;
   box-shadow:0px 0px 5px 5px rgba(0, 0, 0, 0.1);
 }
-.overview_box .overview_img.imgright{
-  text-align: right;
-  margin-left: auto;
+.overview_item{
+  margin-bottom: 25px;
+}
+.overview_box .detailov{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  height: 100%;
 }
 
 @media (max-width: 767px){
@@ -4622,5 +4623,13 @@ img.spin {
   }
   .navhead nav a{
     flex: 100%;
+  }
+  .overview_box::before, .overview_box .overview_img::before{
+    display: none;
+  }
+  .overview_box .detailov{
+    padding-left: 0px;
+    padding-top: 20px;
+    text-align: center;
   }
 }
