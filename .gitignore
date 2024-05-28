@@ -1,0 +1,8 @@
+# Ignore all Python files
+*.py
+
+# Ignore files with 'dev' in the name
+*dev*
+
+# Ignore files with 'test' in the name
+*test*
