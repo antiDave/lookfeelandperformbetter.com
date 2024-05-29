@@ -4261,6 +4261,9 @@ img.spin {
   background-position: right;
   color: #fff;
 }
+.aesthetic_items li h5{
+  margin-bottom: 0;
+}
 
 .columnflex li{
   margin-bottom: 35px;
@@ -4719,7 +4722,6 @@ img.spin {
     transform:translate(0%, 0) scaleY(1);
   }
 }
-
 .botox_treatment .bt_details{
   padding-left: 20px;
   display: flex;
@@ -4727,7 +4729,25 @@ img.spin {
   justify-content: center;
   height: 100%;
 }
+.botox_treatment .bt_details h1, .botox_treatment .bt_details h2{
+  position: relative;
 
+  padding-bottom: 15px;
+} 
+.botox_treatment .bt_details h1::before, .botox_treatment .bt_details h2::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 50%;
+  height: 3px;
+  background: #1787fc;
+  transition: all 0.3s ease-in-out;
+}
+.botox_treatment:hover .bt_details h1::before, .botox_treatment:hover .bt_details h2::before{
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
 .botox_treatment .bt_details ul{
   padding-left: 0;
 }
