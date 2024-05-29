@@ -4643,14 +4643,49 @@ img.spin {
 .botox_treatment{
   margin-bottom: 50px;
   display: inline-block;
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
+.botox_treatment::before {
+  content: "";
+  position: absolute;
+  width: 300%; /* Increased width to ensure continuous background */
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background: rgb(162,255,234);
+  background: linear-gradient(45deg, rgba(162,255,234,1) 0%, rgba(138,185,255,1) 34%, rgba(162,255,234,1) 66%, rgba(138,185,255,1) 100%);
+  z-index: -1;
+  animation: botoxbg 5s linear infinite; /* Adjusted duration for smoother transition */
+}
+
+@keyframes botoxbg {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -100%; /* Move left to the start of the second gradient repeat */
+  }
+  100% {
+    left: -200%; /* Move left to the start of the third gradient repeat */
+  }
+}
+
+
 .botox_treatment .bt_img{
  border-radius: 10px;
  display: flex;
  justify-content: center;
  flex-direction: column;
  height: 100%;
+ position: relative;
 }
+
 .botox_treatment .bt_img img{
   width: 100%;
   height: max-content;
@@ -4681,10 +4716,7 @@ img.spin {
   justify-content: center;
   height: 100%;
 }
-.botox_treatment .bt_details.paddingright{
-  padding-left: 0;
-  padding-right: 20px;
-}
+
 .botox_treatment .bt_details ul{
   padding-left: 0;
 }
@@ -4693,7 +4725,7 @@ img.spin {
   display: inline-block;
   width: 100%;
   padding: 5px 10px;
-  background: #e8e8e8;
+  background: #ffffff;
   border-radius: 5px;
   margin: 5px 0;
   transition: all 0.3s ease-in-out;
