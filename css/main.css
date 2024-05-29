@@ -4229,28 +4229,39 @@ img.spin {
 
 
 /* // aesthetic page design  */
-
+.aesthetic_items {
+  margin-bottom: 0;
+  padding: 20px 10px;  
+}
+.aesthetic_items h5 {
+  color: #fff;
+}
 .top_aesthetic .borderradius img{
   border-radius: 10px;
 }
-.aesthetic_items{
-  margin-bottom: 0;
-  padding: 20px 10px;
-  li{
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    width: 100%;
-    display: inline-block;
-    margin: 5px 0;
-    background: rgb(80,227,195);
-    background: linear-gradient(90deg, rgba(46,98,174,1) 50%, rgba(0,227,195) 100%);
-    h5{
-      margin: 0;
-      color: #fff;
-    }
-  }
+.aesthetic_items li {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100%;
+  display: inline-block;
+  margin: 5px 0;
+  background: linear-gradient(90deg, rgb(46, 98, 174, 1) 25%, rgb(0, 227, 195) 50%, rgb(0, 227, 195) 55%,rgb(46, 98, 174) 70%);
+  background-size: 200%;
+  background-position: left;
+  color: #fff;
+  
+  border: 0;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-position 0.3s ease, color 0.3s ease;
 }
+
+.aesthetic_items li:hover {
+  background-position: right;
+  color: #fff;
+}
+
 .columnflex li{
   margin-bottom: 35px;
   display: flex;
