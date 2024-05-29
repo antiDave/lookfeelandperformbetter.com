@@ -15,6 +15,8 @@ $city = isset($_POST['city']) ? $_POST['city'] : $_GET['city'];
 $state = isset($_POST['state']) ? $_POST['state'] : $_GET['state'];
 $zip = isset($_POST['zip']) ? $_POST['zip'] : $_GET['zip'];
 $degrees = isset($_POST['degrees']) ? $_POST['degrees'] : $_GET['degrees'];
+$total = isset($_POST['hiddentotal']) ? $_POST['hiddentotal'] : $_GET['hiddentotal'];
+$courses = isset($_POST['courses']) ? $_POST['courses'] : (isset($_GET['courses']) ? $_GET['courses'] : []);
 
 // Check if form data is present
 if (!empty($name) && !empty($address) && !empty($city) && !empty($state) && !empty($zip) && !empty($degrees)) {
@@ -31,12 +33,12 @@ if (!empty($name) && !empty($address) && !empty($city) && !empty($state) && !emp
 
         // Recipients
         $mail->setFrom('dave@lookfeelandperformbetter.com', 'Dave');
-        $mail->addAddress('usamtg@hotmail.com', 'Recipient Name');
+        $mail->addAddress('usamtg@hotmail.com', 'Dave');
 
         // Content
         $mail->isHTML(true);
         $mail->Subject = 'Training Form Submission';
-        $mail->Body = formatFormData($name, $address, $address2, $city, $state, $zip, $degrees);
+        $mail->Body = formatFormData($name, $address, $address2, $city, $state, $zip, $degrees, $total, $courses);
 
         // Send the email
         $mail->send();
@@ -54,7 +56,7 @@ if (!empty($name) && !empty($address) && !empty($city) && !empty($state) && !emp
 }
 
 // Function to format the form data
-function formatFormData($name, $address, $address2, $city, $state, $zip, $degrees)
+function formatFormData($name, $address, $address2, $city, $state, $zip, $degrees, $total, $courses)
 {
     $formData = "<h2>Training Form Submission</h2>";
     $formData .= "<p><strong>Name:</strong> $name</p>";
@@ -66,6 +68,16 @@ function formatFormData($name, $address, $address2, $city, $state, $zip, $degree
     $formData .= "<p><strong>State:</strong> $state</p>";
     $formData .= "<p><strong>Zip:</strong> $zip</p>";
     $formData .= "<p><strong>Credentials:</strong> $degrees</p>";
+    $formData .= "<p><strong>Total:</strong> $total</p>";
+    
+    if (!empty($courses)) {
+        $formData .= "<p><strong>Selected Courses:</strong></p>";
+        $formData .= "<ul>";
+        foreach ($courses as $course) {
+            $formData .= "<li>$course</li>";
+        }
+        $formData .= "</ul>";
+    }
 
     return $formData;
 }
