@@ -4674,10 +4674,11 @@ img.spin {
   opacity: 0.7;
   background: rgb(162,255,234);
   background: linear-gradient(45deg, rgba(162,255,234,1) 0%, rgba(138,185,255,1) 34%, rgba(162,255,234,1) 66%, rgba(138,185,255,1) 100%);
-  z-index: -1;
-  animation: botoxbg 5s linear infinite; /* Adjusted duration for smoother transition */
+  z-index: -1; /* Adjusted duration for smoother transition */
 }
-
+.botox_treatment:hover::before{
+  animation: botoxbg 0.5s linear 1;
+}
 @keyframes botoxbg {
   0% {
     left: 0;
@@ -4709,7 +4710,7 @@ img.spin {
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .botox_treatment:hover .bt_img img{
-  animation: botoximg 0.5s 1;
+  animation: botoximg 0.8s 1;
 }
 @keyframes botoximg {
   0%{
