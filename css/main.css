@@ -4767,3 +4767,68 @@ img.spin {
   color: #fff;
   transition: all 0.3s ease-in-out;
 }
+
+.title_medical{
+  padding: 40px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+.title_medical span{
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.title_medical .logo_items ul{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: 20px;
+}
+.title_medical .logo_items ul li{
+  display: inline-block;
+  background: #e8f8ff;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.title_medical .logo_items ul li::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(102%);
+  background: #20bfa9;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.title_medical .logo_items ul li:hover{
+  color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+.title_medical .logo_items ul li:hover::before{
+  transform: translate(0%);
+  transition: all 0.3s ease-in-out;
+}
+
+.tm_image{
+  margin: 40px 0;
+}
+.tm_image img{
+  box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+}
