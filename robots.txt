@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /thankyou.html
+Disallow: /index-dev.html
+Disallow: /portal.html
+Disallow: /login-practitioner.html
+Disallow: /privacy.html
+Disallow: /*.php
+Disallow: /*.py
+Disallow: /*.json
+Sitemap: https://lookfeelandperformbetter.com/sitemap.xml
+
