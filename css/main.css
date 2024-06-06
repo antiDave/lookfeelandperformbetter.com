@@ -2137,6 +2137,15 @@ select {
   letter-spacing: -0.3px;
   color: #fff;
 }
+.hero-area-l-17 .content h6 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 46px;
+  letter-spacing: -0.3px;
+  color: #fff;
+}
 
 @media (min-width: 480px) {
   .hero-area-l-17 {
@@ -2403,6 +2412,16 @@ select {
   background: #f8fbfe;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.content-area-l-17-1 h1 {
+  color: #2c2c2c;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 46px;
+  letter-spacing: -0.3px;
 }
 
 @media (min-width: 768px) {
